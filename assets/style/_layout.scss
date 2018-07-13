@@ -1,0 +1,22 @@
+//main:app.scss
+
+body {
+  padding: $margin-default * 2;
+  margin: 0;
+  border: $margin-default solid $color-accent;
+  &:after {
+    content: "";
+    display: block;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: $margin-default;
+    background-color: $color-accent;
+  }
+  .wrap {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 800px;
+  }
+}
