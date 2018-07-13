@@ -6,7 +6,9 @@ html(lang="en")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title=title
     link(rel="stylesheet", href="assets/style/app.min.css")
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Open+Sans:400,700")
   body(class=page)
-    include blocs/_header.jade
-      block content                  
-    include blocs/_footer.jade
+    .wrap
+      include blocs/_header.jade
+        block content                  
+      include blocs/_footer.jade
