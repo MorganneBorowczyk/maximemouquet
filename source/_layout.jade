@@ -1,0 +1,12 @@
+doctype
+html(lang="en")
+  block var
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title=title
+    link(rel="stylesheet", href="assets/style/app.min.css")
+  body(class=page)
+    include blocs/_header.jade
+      block content                  
+    include blocs/_footer.jade
