@@ -1,9 +1,10 @@
 //main:app.scss
 
 body {
-  padding: $margin-default * 2;
+  padding: ($grid-size * 10) 0 0;
   margin: 0;
-  border: $margin-default solid $color-accent;
+  border: $margin-default solid $color-white;
+  background-color: darken($color-white, 3%);
   &:after {
     content: "";
     display: block;
@@ -12,11 +13,12 @@ body {
     right: 0;
     bottom: 0;
     height: $margin-default;
-    background-color: $color-accent;
+    background-color: $color-white;
   }
   .wrap {
     width: 100%;
     margin: 0 auto;
+    padding: 0 ($grid-size * 2) ($grid-size * 3);
     max-width: 800px;
   }
 }

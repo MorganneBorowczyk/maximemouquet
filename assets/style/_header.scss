@@ -1,0 +1,56 @@
+//main:app.scss
+
+header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-color: $color-white;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  padding: 20px 30px;
+  align-items: center;
+  justify-content: space-around;
+  transition: padding .3s ease;
+  .logo {
+    font-family: $font-accent;
+    font-size: $grid-size * 2;
+    color: $color-black;
+    font-weight: normal;
+    margin-bottom: 10px;
+    transition: font-size .3s ease, margin .3s ease;
+  }
+  nav {
+    ul {
+      list-style: none;
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: flex;
+      li {
+        padding: 0 20px;
+        margin: 0;
+      }
+      a {
+        padding: 5px 0;
+        color: $color-black;
+        border-bottom: 0px;
+        transition: font-size .3s ease;
+        &:hover {
+          color: $color-accent;
+          border-bottom: $link-border;
+        }
+      }
+    }
+  }
+  &.scrolled {
+    padding: 0 30px;
+    .logo {
+      font-size: $grid-size * 1.2;
+      margin-bottom: 5px;
+    }
+    a {
+      font-size: $grid-size * 5 / 6;
+    }
+  }
+}
