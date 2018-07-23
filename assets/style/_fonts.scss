@@ -1,5 +1,10 @@
 //main:app.scss
 
+@font-face {
+  font-family: 'Kankin';
+  src:url(../fonts/KankinRegular.otf);
+}
+
 body {
   font-family: $font-regular;
   font-size: $grid-size;
