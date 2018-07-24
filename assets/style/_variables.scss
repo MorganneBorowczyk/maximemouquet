@@ -1,14 +1,19 @@
 //main:app.scss
 
-$font-regular: 'Open Sans', sans-serif;
-$font-accent: 'Kankin', serif;
+$font-regular: 'Raleway', sans-serif;
+$font-accent: 'Titania', 'Georgia', serif;
 
 $color-white: #FFFFFF;
+$color-grey-light: #CCCCCC;
+$color-grey: #AAAAAA;
 $color-black: #000000;
-$color-accent: #FFB604;
+$color-accent: #FEA65E;
 
 $link-border: 2px solid $color-accent;
 
 $grid-size: 16px;
 
-$margin-default: $grid-size * 2;
+$margin-default: 2em;
+
+$breakpoint-mobile: 600px;
+$breakpoint-tablet: 1200px;

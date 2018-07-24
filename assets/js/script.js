@@ -1,14 +1,20 @@
-$(document).ready(function(){
+$(document).ready(function() {
 
   // Reduce header on scroll
-  $(window).scroll(function(){
-    setTimeout(function(){
-      if ($(window).scrollTop() > 100) {
-        $('header').addClass('scrolled')
-      } else {
-        $('header').removeClass('scrolled')
-      }
-    }, 300);
-  });
+  // var windowHeight = ($(window).height()) - 50;
+  // $(window).scroll(function(){
+  //   setTimeout(function(){
+  //     if ($(window).scrollTop() > 5) {
+  //       $('header').addClass('scrolled');
+  //     } else {
+  //       $('header').removeClass('scrolled');
+  //     }
+  //     if ($(window).scrollTop() > windowHeight) {
+  //       $('header').addClass('top');
+  //     } else {
+  //       $('header').removeClass('top');
+  //     }
+  //   }, 300);
+  // });
 
 });

@@ -1,0 +1,14 @@
+nav 
+  ul
+    li(class=(page == "home" ? "active" : ""))
+      - if (page == "home" ? "active" : "")
+        | Accueil
+      - else
+        a(href="home.html")
+          span Accueil
+    li(class=(page == "projects" ? "active" : ""))
+      - if (page == "projects" ? "active" : "")
+        | Enregistrements
+      - else
+        a(href="projects.html")
+          span Enregistrements

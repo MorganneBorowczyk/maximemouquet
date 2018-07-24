@@ -1,57 +1,64 @@
 //main:app.scss
 
 header {
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  background-color: $color-white;
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
-  padding: 20px 30px;
   align-items: center;
+  padding: 1em;
   justify-content: space-around;
-  transition: padding .3s ease;
+  flex-direction: column;
+  margin-bottom: 5em;
   .logo {
     font-family: $font-accent;
-    font-size: $grid-size * 2;
-    color: $color-black;
+    font-size: 1.5em;
     font-weight: normal;
-    margin-bottom: 10px;
-    transition: font-size .3s ease, margin .3s ease;
-    text-transform: uppercase;
+    white-space: nowrap;
+    margin: 0;
   }
-  nav {
-    ul {
-      list-style: none;
-      display: -webkit-flex;
-      display: -ms-flex;
-      display: flex;
-      li {
-        padding: 0 20px;
-        margin: 0;
-      }
-      a {
-        padding: 5px 0;
-        color: $color-black;
-        border-bottom: 0px;
-        transition: font-size .3s ease;
-        &:hover {
-          color: $color-accent;
-          border-bottom: $link-border;
+  .home & {
+    justify-content: center;
+    background-image: url(../images/photos/portrait_live.jpg);
+    background-size: cover;
+    background-position: top center;
+    background-attachment: fixed;
+    padding: 5em;
+    height: 100vh;
+    text-align: center;
+    li {
+      &.active {
+        color: $color-white;
+        &:after {
+          background-color: $color-white;
         }
       }
     }
-  }
-  &.scrolled {
-    padding: 0 30px;
-    .logo {
-      font-size: $grid-size * 1.2;
-      margin-bottom: 5px;
+    h1 {
+      font-size: 5em;
+      color: $color-white;
     }
     a {
-      font-size: $grid-size * 5 / 6;
+      color: $color-white;
+      border-bottom: 0px;
+      &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        background-color: $color-white;
+        transition: .5s ease;
+        border-radius: 0 50px;
+      }
+      &:hover {
+        color: $color-black;
+        border-bottom: 0px;
+      }
+    }
+  }
+  @media screen and (max-width: $breakpoint-mobile) {
+    .home & {
+      h1 {
+        font-size: 3em;
+      }
     }
   }
 }

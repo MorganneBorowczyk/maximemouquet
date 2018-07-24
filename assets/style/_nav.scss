@@ -1,0 +1,65 @@
+//main:app.scss
+
+nav {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    flex-wrap: wrap;
+    li {
+      color: $color-grey;
+      padding: 0 20px;
+      margin: 0;
+      &.active {
+        font-weight: bold;
+        position: relative;
+        &:after {
+          content: "";
+          display: block;
+          width: 5px;
+          height: 5px;
+          position: absolute;
+          background-color: $color-grey;
+          border-radius: 100%;
+          left: calc(50% - 2.5px);
+        }
+      }
+    }
+    a {
+      padding: 5px 0;
+      transition: font-size .3s ease;
+      position: relative;
+      transition: color .3s ease;
+      border-bottom: 0;
+      color: $color-grey;
+      font-weight: normal;
+      span {
+        position: relative;
+      }
+      &:hover {
+        color: $color-accent;
+        border-bottom: $link-border;
+        font-weight: bold;
+        &:before {
+          top: 0;
+          right: -20px;
+          bottom: 0;
+          left: -20px;
+          transform: skew(-30deg);
+        }
+      }
+    }
+  }
+  @media screen and (max-width: $breakpoint-mobile) {
+    ul {
+      flex-direction: column;
+      a {
+        padding: 5px;
+        display: block;
+      }
+    }
+  }
+}

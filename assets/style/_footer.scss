@@ -2,6 +2,11 @@
 
 footer {
   background-color: $color-white;
-  padding: $grid-size * 2;
+  padding: 2em;
   text-align: center;
+  p {
+    margin: 0;
+    font-size: 0.75em;
+    color: $color-grey;
+  }
 }

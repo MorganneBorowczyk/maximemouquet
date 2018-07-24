@@ -1,0 +1,23 @@
+//output:../projects.html, pretty:true
+
+extend _layout.jade
+block var
+  - page = "projects"
+  - title = "Maxime Mouquet : Projets"
+  
+mixin project(groupe, projet, image, anee)
+  li
+    .image-wrapper
+      img(src=image, alt=projet)
+    .text-wrapper
+      h3= groupe
+      h4= projet
+      p= anee
+    
+block content
+  .project-list
+    ul
+      +project("Holispark", "Sonic Bloom", "assets/images/releases/holispark-album-sonic-bloom.jpg", "2018")
+      +project("Phidias", "Album", "assets/images/releases/phidias-album.jpg", "2015")
+      +project("Wasting", "EP", "assets/images/releases/wasting-ep.jpg", "2013")
+      
