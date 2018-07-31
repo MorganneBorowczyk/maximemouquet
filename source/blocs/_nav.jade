@@ -12,3 +12,15 @@ nav
       - else
         a(href="projects.html")
           span Enregistrements
+    li(class=(page == "gigs" ? "active" : ""))
+      - if (page == "gigs" ? "active" : "")
+        | Concerts
+      - else
+        a(href="gigs.html")
+          span Concerts
+    li(class=(page == "contact" ? "active" : ""))
+      - if (page == "contact" ? "active" : "")
+        | Contact
+      - else
+        a(href="contact.html")
+          span Contact
